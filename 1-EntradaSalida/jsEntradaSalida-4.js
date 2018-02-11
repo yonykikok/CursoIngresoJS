@@ -4,8 +4,16 @@
 */
 function Mostar()
 {
+	
 	var nombre;
-	nombre=prompt("ingresa tu nombre");
+		//prompt ("ingrese su nomre", "ejemplo: Juan");
+	nombre= prompt ("ingrese su edad por favor", "18 años");
+	
+	/* "document.getElementById('el nombre del ID').value=Variable;"
+	muestra el contenido ingresado por el prompt en la casilla del usuario.
+	*/
 	document.getElementById('elNombre').value=nombre;
+
+	
 }
 

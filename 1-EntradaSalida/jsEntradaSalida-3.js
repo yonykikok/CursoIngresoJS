@@ -2,11 +2,13 @@
 y luego mostrarlo por 'Alert' al presionar el botón  'MOSTRAR'*/
 function Mostar()
 {
-	//name=document.g +shift+i
+	
 	var nombre;
+//document.get.ElementById(toma el dato de esa casilla)
 	nombre=document.getElementById('elNombre').value;
+	
+	//alert(muestra la variable o el msj que querramos)
 	alert(nombre);
-
 }
 
 

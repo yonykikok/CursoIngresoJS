@@ -5,15 +5,19 @@ ej.: "El resto es 0 ."*/
 function SacarResto()
 {
 	
-	var numero1
-	var numero2
+	var dividendo
+	var divisor
 	var resultado
-	var resto
 
-	numero1=document.getElementById('numeroDividendo').value;
-	numero2=document.getElementById('numeroDivisor').value;
+	dividendo=document.getElementById('numeroDividendo').value;
+	dividendo=parseInt(dividendo);
 
-	resultado=parseInt(numero1)%parseInt(numero2);
+	divisor=document.getElementById('numeroDivisor').value;
+	divisor=parseInt(divisor);
+
+	//para sacar el resto de una division usamos "%"
+	resultado=dividendo%divisor;
 
 	alert("el resto es "+resultado);
+
 }

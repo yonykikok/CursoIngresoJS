@@ -3,16 +3,17 @@ transformarlos a enteros (parseInt) y Sumarlos.
 Mostar el resulto por medio de "ALERT"*/
 function sumar()
 {
-	var nombre;
-	var nombre2;
-	var resultado;
-	resultado=nombre+nombre2
+var numerouno	
+var numerodos
+//
+numerouno=document.getElementById('numeroUno').value;
+//parseInt transforma los numeros de ID en numeros enteros para poder operar con ellos (2+4; 4-5; 3*8; 6/2 etc.)
+numerouno=parseInt(numerouno);
 
-	nombre=document.getElementById ('numeroUno').value;
-	nombre2=document.getElementById ('numeroDos').value;
-	resultado=parseInt	(nombre)+parseInt(nombre2);
+numerodos=document.getElementById('numeroDos').value;
+numerodos=parseInt(numerodos);
 
-	alert("el resultado es " +(resultado));
+alert(numerouno+numerodos);
 
 }
 

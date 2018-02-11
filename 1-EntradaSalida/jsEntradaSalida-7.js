@@ -3,58 +3,60 @@ transformarlos a enteros (parseInt),realizar la operación correcta y
 mostar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
-{	
-	var numero1
-	var numero2
+{	//las variables se ponen una sola ves y no hace falta volver a declararlas por cada enunciado.
+	var numerouno
+	var numerodos
+	//crear una nueva variable para concatenar dos variables ayuda a no mesclarse.
 	var resultado
 
-	numero1=document.getElementById('numeroUno').value;
-	numero2=document.getElementById('numeroDos').value;
+	numerouno=document.getElementById('numeroUno').value;
+	numerouno=parseInt(numerouno);
 
-	resultado=parseInt(numero1)+parseInt(numero2);
-	alert(parseInt(resultado));
+	numerodos=document.getElementById('numeroDos').value;
+	numerodos=parseInt(numerodos);
+
+	resultado=numerouno+numerodos;
+
+	alert("la suma es "+resultado);
 }
 
 function restar()
 {
-	var numeroresta1
-	var numeroresta2
-	var resultadoresta
+	numerouno=document.getElementById('numeroUno').value;
+	numerouno=parseInt(numerouno);
 
-	numeroresta1=document.getElementById('numeroUno').value;
-	numeroresta2=document.getElementById('numeroDos').value;
+	numerodos=document.getElementById('numeroDos').value;
+	numerodos=parseInt(numerodos);
 
-	resultadoresta=parseInt(numeroresta1)-parseInt(numeroresta2);
+	resultado= numerouno-numerodos;
 
-	alert(parseInt(resultadoresta));
+	alert("la resta es " +resultado);
 }
 
 function multiplicar()
 { 
-	var numeromultiplicado1
-	var numeromultiplicado2
-	var resultadomultiplicacion
+	numerouno=document.getElementById('numeroUno').value;
+	numerouno=parseInt(numerouno);
 
-	numeromultiplicado1=document.getElementById('numeroUno').value;
-	numeromultiplicado2=document.getElementById('numeroUno').value;
+	numerodos=document.getElementById('numeroDos').value;
+	numerodos=parseInt(numerodos);
 
-	resultadomultiplicacion=parseInt(numeromultiplicado1)*parseInt(numeromultiplicado2);
+	resultado=numerouno*numerodos;
 
-	alert(parseInt(resultadomultiplicacion));
+	alert("la multiplicacion es "+resultado);
 }
 
 function dividir()
 {
-	var divicion1
-	var divicion2
-	var resultadodividir
+	
+	numerouno=document.getElementById('numeroUno').value;
+	numerouno=parseInt(numerouno);
 
-	divicion1=document.getElementById('numeroUno').value;
-	divicion2=document.getElementById('numeroDos').value;
+	numerodos=document.getElementById('numeroDos').value;
+	numerodos=parseInt(numerodos);
 
-	resultadodividir=parseInt(divicion1)/parseInt(divicion2);
+	resultado=numerouno/numerodos;
 
-	alert(parseInt(resultadodividir));
-
+	alert("la divicion es "+resultado);
 }
 
