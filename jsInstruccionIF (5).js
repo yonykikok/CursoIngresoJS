@@ -1,19 +1,21 @@
 function Mostrar()
 {
-//tomo la edad  
+/*tomo la edad  
 
-var edad
+Enunciado:
+Al ingresar una edad solo debemos informar si la persona NO es adolescente.
+*/
 
-edad=document.getElementById('edad').value;
-edad=parseInt(edad);
+	var edad;
 
-if (edad<13||edad>18) {
+	edad=document.getElementById('edad').value;
+	edad=parseInt(edad);
 
-alert("usted no es adolescente");
-}
+	if (edad<13||edad>17) {
 
-else{
-	alert("haga lo que quiera");
-}
+		alert("usted no es adolescente");
+
+	}
+
 
 }//FIN DE LA FUNCIÓN
