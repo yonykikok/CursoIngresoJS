@@ -29,7 +29,7 @@ function CalcularPrecio ()
 	if (cantidad>5)
 		{
 			descuento=0.5;
-			preciocondescuento=preciosindescuento*descuento;
+			
 			
 		}
 else{	
@@ -86,12 +86,13 @@ else{
 					descuento=1
 					preciocondescuento=preciosindescuento*descuento;
 	}
-		
+		preciocondescuento=preciosindescuento*descuento;
 		document.getElementById('precioDescuento').value="$"+preciocondescuento;
-	if (preciocondescuento>120) 
+	*/if (preciocondescuento>120) 
 		{
 			ingresosbrutos=preciocondescuento+preciocondescuento*0.10
 			alert("Usted pago "+ingresosbrutos+" de IIBB");
-		}
+		}*/
+
 
 }
