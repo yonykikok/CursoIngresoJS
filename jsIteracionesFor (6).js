@@ -1,22 +1,20 @@
 function Mostrar()
 {
 /*Enunciado:
-al presionar el botón pedir un número. Mostar los numeros pares desde el 1 al número 
-ingresado, y mostar la cantidad de numeros pares encontrados.*/
-	var numero;
-	var pares;
+al presionar el botón pedir un número. Mostar los numeros pares desde el 1
+ al número ingresado, y mostar la cantidad de numeros pares encontrados.*/
+var numero;
+var numerospares;
+var primeringreso;
+primeringreso=prompt("ingrese hasta que numero sacar los pares")
 
-	pares=0
+for(repeticiones=0;repeticiones=numero; repeticiones++)
+numero=prompt("ingrese un numero");
 
-	numero=prompt("ingrese un numero");
-
-	for(repetir=0; repetir<numero; repetir++)
-	{
-		pares=numero%2==0
-	}
-
-	document.write(numero);
-
-
+if (numero%2 ==0) 
+{
+	numerospares++;
+	document.write(numerospares);
+}
 
 }//FIN DE LA FUNCIÓN
