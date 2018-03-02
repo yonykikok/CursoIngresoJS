@@ -1,28 +1,39 @@
 function Mostrar()
 {
-/*Enunciado:
-Bienvenidos. 
-(IF) Realizar el algoritmo que pida dos números por prompt, si son iguales que los multiplique, 
-si el primero es mayor al segundo que los reste y si no que los sume, mostrar el resultado por document.write.*/
+	/* ingresamos dos numeros, si son iguales los cantenamos
+	si el primero es meyor que el segundo los multiplicamos
+	si el primero es menor que el segundo los restamos	*/
 
-	var numerouno;
-	var numerodos;
+	var numero; 
+	var  numerodos;
+	var suma;
+	var resta;
+	var multiplicamos;
 
-	numerouno=prompt("ingrese un numero");
-	numerouno=parseInt(numerouno);
+
+
+	numero=prompt("ingrese un numero");
+	
+	numero=parseInt(numero);
+					
 	numerodos=prompt("ingrese otro numero");
 	numerodos=parseInt(numerodos);
 
-	if (numerouno==numerodos) {
+	if (numero==numerodos) 
+		{
+			suma=numero+""+numerodos;
+		}
+		else if (numero>numerodos) 
+			{
+				multiplicamos=numero*numerodos;
+			}
+				
+			
+			else if (numero<numerodos) 
+				{
 
-		alert(numerouno*numerodos);
-	}
-	if (numerouno>numerodos) {
+					resta=numero- numerodos;
+				}	
 
-		alert(numerouno-numerodos);
-	}
-	if (numerouno<numerodos) {
-
-		alert(numerouno+numerodos);
-	}
+			document.write("suma "+suma+"<br>"+"multiplicacion "+multiplicamos+"<br>"+"resta "+resta);
 }
