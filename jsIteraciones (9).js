@@ -1,58 +1,40 @@
 function Mostrar()
 {
-	/*Enunciado:
+/*Enunciado:
 Al presionar el botón pedir números hasta que el usuario quiera,
- mostrar el número máximo y el número mínimo.*/
-
-	var contador=0;
-	// declarar variables
-	var numero;
-	var respuestadesalida;
-	var minimo;
-	var maximo;
-	var bandera=0;
+mostrar el número máximo y el número mínimo.*/
 	
-	var respuesta='si';
+	var numero;
+	var entradaWhile="si";
+	var maximo;
+	var minimo;
+	var bandera=0;
 
-	while(true)
+	while(entradaWhile=="si")
 	{
-		contador++;
-		numero=prompt("ingrese los numeros necesarios");
-
+		numero=prompt("ingrese un numero");
 		if (numero==null) 
 		{
-			respuestadesalida=prompt('para salir ingrese "si"');
-			if (respuestadesalida=="si") 
-			{
-				break;
-			}
-			else alert("Bueno, sigamos");
-			
+			break;
 		}
 		numero=parseInt(numero);
 
 		if (bandera==0) 
-			{
-			bandera++
-			minimo=numero;
+		{
+			bandera++;
 			maximo=numero;
-			}
-
-		if (numero<minimo) 
+			minimo=numero;
+		}
+			if (numero>maximo) 
 			{
-				minimo=numero;
+				maximo=numero;
+			}
+			if (numero<minimo) 
+			{
+				minimo;numero;
 			}
 
-			else if(numero>maximo) 
-				{
-				maximo=numero;
-				}
-	
 	}
-	
-
-	document.getElementById('minimo').value=minimo;
 	document.getElementById('maximo').value=maximo;
-
-
+	document.getElementById('minimo').value=minimo;
 }//FIN DE LA FUNCIÓN

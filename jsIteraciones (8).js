@@ -1,52 +1,35 @@
 function Mostrar()
 {
 /*Enunciado:
-Al presionar el botón pedir números hasta que el usuario quiera
-, sumar los que son positivos y multiplicar los negativos.*/
-
-
-	var contador=0;
-	var positivo=0;
-	var negativo=1;
-	var acumulador;
-	var numero;
-	
+Al presionar el botón pedir números hasta que el usuario quiera, 
+sumar los que son positivos y multiplicar los negativos.*/
 	var respuesta='si';
+	var numeroPedido;
+	var sumaPositivos=0;
+	var multiplicarNegativos=1;
 
-	
-
-	while(true)
+	while(respuesta=="si")
 	{
-		contador++;
-		numero=prompt("ingrese el importe");
-
-		if (numero==null) 
+		numeroPedido=prompt("ingrese un numero");
+		if (numeroPedido==null)
 			{
-				respuesta=prompt('para obtener la suma ingrese"si"');
-				if (respuesta=="si") 
-				{
-					break;	
-				}
-				
+				break;
 			}
+		numeroPedido=parseInt(numeroPedido);
 
-		numero=parseInt(numero);
-		acumulador=contador+numero;
-
-			if (acumulador>0) 
-			{
-				positivo+=numero;
-			}
-			else if (acumulador<0)
-			{
-				negativo*=numero;
-			}
-
-	
+		if (numeroPedido>0)
+		{
+			sumaPositivos=sumaPositivos+numeroPedido;
+		}
+		else if (numeroPedido<0) 
+		{
+		
+			multiplicarNegativos=multiplicarNegativos*numeroPedido;
+		}
 
 	}
 
-	document.getElementById('suma').value=positivo;
-	document.getElementById('producto').value=negativo;
+document.getElementById('suma').value=sumaPositivos;
+document.getElementById('producto').value=multiplicarNegativos;
 
 }//FIN DE LA FUNCIÓN
