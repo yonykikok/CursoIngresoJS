@@ -9,40 +9,51 @@ a) el promedio de las notas totales.
 b) la nota más baja. 
 c) la cantidad de varones que su nota haya sido mayor o igual a 6.*/
 
-	var notas;
+	var nota;
 	var sexo;
-	var notaBaja
+	var notabaja;
 	var bandera=0;
+	var acumuladorDeNotas=0;
 	var promedio;
+	var contadorvarones=0;
 
-	
+
 	for (contador=0; contador<6; contador++){
 
-		
-		notas=prompt("ingrese las notas del 0 al 10");
-		if (notas==null) 
-			{
-				break;
-			}
-		notas=parseInt(notas);
-
-		while(sexo!="m"&&sexo!="f")
+		nota=prompt("ingrese la nota del estudiante");
+		while(isNaN(nota)||nota<0||nota>10)
 		{
-			sexo=prompt("ingrese un sexo valido");
+			nota=prompt("ingrese una nota valida del 0 al 10");
 		}
+		nota=parseInt(nota);
+		sexo=prompt("ingrese el sexo del alumno 'f' o 'm' ");
 
- 			if (bandera==0) 
+		while(sexo!='f'&&sexo!='m')
+			{	
+				sexo=prompt("ERROR, ingrese el sexo del alumno 'f' o 'm' ");
+			}
+			if (sexo=="m"&&nota>5) 
 			{
-				notaBaja=notas;
+				contadorvarones++;
 			}
 
-			if (nota<notaBaja) 
-			{
-				notaBaja=nota;
-			}
+		if (bandera==0)
+		{
+			bandera++;
+
+			notabaja=nota;
+		}
+			if (nota<notabaja) 
+				{
+					notabaja=nota;
+				}
+		acumuladorDeNotas=acumuladorDeNotas+nota;
+		promedio=acumuladorDeNotas/6;
+
 	}
-	
-	document.write(notaBaja);
-	
+	alert("el promedio es "+promedio);
+	alert("la nota mas baja es " +notabaja);
+	alert("varones con notas mayores de 6 solo hay "+contadorvarones);
+	//alert("la suma de las notas es "+acumuladorDeNotas);
 }
 
